@@ -1,5 +1,7 @@
 # travel_vue_app
 
+仿写qunar app
+
 ## Project setup
 ```
 yarn install
