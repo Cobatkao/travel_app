@@ -31,6 +31,7 @@ export default {
   background: $bgColor;
   color: #ffffff;
   .header__search_input {
+    display: flex;
     flex: 1;
     height: .64rem;
     line-height: .64rem;
