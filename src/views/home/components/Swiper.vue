@@ -19,11 +19,13 @@ export default {
   data() {
     return {
       swiperOption: {
-        pagination: ".swiper-pagination",
+        pagination: {
+          el: ".swiper-pagination"
+        },
+        slidesperView: 1,
         autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-          speed: 1000
+          delay: 2500,
+          disableOnInteraction: false
           //stopOnLastSlide: false
         },
         loop: true
