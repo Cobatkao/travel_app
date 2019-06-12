@@ -8,12 +8,17 @@ import "@s/reset.css";
 import "@s/border.css";
 // 全局使用iconfont
 import "@s/iconfont.css";
+// 轮播样式
+import "swiper/dist/css/swiper.css";
 
 // 解决click 300ms延迟问题
 import fastClick from "fastclick";
+// 引入轮播
+import VueAwesomeSwiper from "vue-awesome-swiper";
 
 Vue.config.productionTip = false;
 fastClick.attach(document.body);
+Vue.use(VueAwesomeSwiper);
 
 new Vue({
   router,
