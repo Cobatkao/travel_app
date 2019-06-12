@@ -22,7 +22,8 @@ module.exports = {
           // 目录别名配置
           "@": path.resolve(__dirname, "./src"),
           "@c": path.resolve(__dirname, "./src/components"),
-          "@v": path.resolve(__dirname, "./src/views")
+          "@v": path.resolve(__dirname, "./src/views"),
+          "@s": path.resolve(__dirname, "./src/assets/style")
         }
       }
     });
