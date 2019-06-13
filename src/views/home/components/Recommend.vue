@@ -30,51 +30,14 @@
 <script>
 export default {
   name: "Recommend",
+  props: {
+    recommendList: {
+      type: Array,
+      required: true
+    }
+  },
   data() {
-    return {
-      recommendList: [
-        {
-          id: "001",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_200x200_2458ffb2.jpg",
-          title:
-            "八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城",
-          desc: "八达岭长城，位于北京市延庆区军都山关沟古道北口。"
-        },
-        {
-          id: "002",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_200x200_2458ffb2.jpg",
-          title:
-            "八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城",
-          desc: "八达岭长城，位于北京市延庆区军都山关沟古道北口。"
-        },
-        {
-          id: "003",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_200x200_2458ffb2.jpg",
-          title:
-            "八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城",
-          desc: "八达岭长城，位于北京市延庆区军都山关沟古道北口。"
-        },
-        {
-          id: "004",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_200x200_2458ffb2.jpg",
-          title:
-            "八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城",
-          desc: "八达岭长城，位于北京市延庆区军都山关沟古道北口。"
-        },
-        {
-          id: "005",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_200x200_2458ffb2.jpg",
-          title:
-            "八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城八达岭长城",
-          desc: "八达岭长城，位于北京市延庆区军都山关沟古道北口。"
-        }
-      ]
-    };
+    return {};
   }
 };
 </script>

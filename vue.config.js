@@ -1,4 +1,11 @@
 const path = require("path");
+const express = require("express");
+const app = express();
+
+var mockData = require("./public/mock/index.json");
+
+var apiRouter = express.Router();
+app.use("/api", apiRouter);
 
 module.exports = {
   publicPath: "./", // 基本路径
@@ -43,6 +50,12 @@ module.exports = {
   pwa: {}, // PWA 插件相关配置 see https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa
   // webpack-dev-server 相关配置
   devServer: {
+    // 在所有中间件之前执行
+    before(app) {
+      app.get("/api/index", (req, res) => {
+        res.json({ status: "success", code: 0, data: mockData });
+      });
+    },
     open: process.platform === "darwin",
     host: "0.0.0.0", // 允许外部ip访问
     port: 8888, // 端口
@@ -53,10 +66,10 @@ module.exports = {
     }, // 错误、警告在页面弹出
     proxy: {
       "/api": {
-        target: "http://www.baidu.com/api",
+        target: "http://localhost:8888",
         changeOrigin: true, // 允许websockets跨域
-        // ws: true,
         pathRewrite: {
+          // 路径替换
           "^/api": ""
         }
       }
