@@ -14,6 +14,7 @@
           <p class="icon-desc">{{ item.desc }}</p>
         </div>
       </swiper-slide>
+      <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
   </div>
 </template>
@@ -117,8 +118,10 @@ export default {
 .icons >>> .swiper-container
   height 0
   max-width 100%
-  padding-bottom 50%
-  overflow hidden
+  padding-bottom 54%
+  & /deep/ .swiper-pagination-bullets
+    bottom .10rem
+    color red
   .icon
     float left
     width 25%
