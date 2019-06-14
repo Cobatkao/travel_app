@@ -35,7 +35,6 @@ export default {
         let res = data.data.data;
         if (res.ret && res.data) {
           let data = res.data;
-          console.log(data);
           this.cities = data.cities;
           this.hotCities = data.hotCities;
         }
