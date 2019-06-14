@@ -2,7 +2,8 @@ const path = require("path");
 const express = require("express");
 const app = express();
 
-var mockData = require("./public/mock/index.json");
+var mockIndexData = require("./public/mock/index.json");
+var mockCityData = require("./public/mock/city.json");
 
 var apiRouter = express.Router();
 app.use("/api", apiRouter);
@@ -53,7 +54,10 @@ module.exports = {
     // 在所有中间件之前执行
     before(app) {
       app.get("/api/index", (req, res) => {
-        res.json({ status: "success", code: 0, data: mockData });
+        res.json({ status: "success", code: 0, data: mockIndexData });
+      });
+      app.get("/api/city", (req, res) => {
+        res.json({ status: "success", code: 0, data: mockCityData });
       });
     },
     open: process.platform === "darwin",

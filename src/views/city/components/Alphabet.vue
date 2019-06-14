@@ -1,30 +1,13 @@
 <template>
   <ul class="list">
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
+    <li class="item" v-for="(item, key) of cities" :key="key">{{ key }}</li>
   </ul>
 </template>
 
 <script>
 export default {
-  name: "CityAlphabet"
+  name: "CityAlphabet",
+  props: ["cities"]
 };
 </script>
 
@@ -42,6 +25,8 @@ export default {
   justify-content center
   align-items center
   .item
-    line-height .4rem
+    line-height .32rem
     color $bgColor
+    font-size .24rem
+    font-weight bold
 </style>
